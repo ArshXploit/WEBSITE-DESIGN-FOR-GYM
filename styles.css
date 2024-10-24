@@ -1,0 +1,140 @@
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  animation: slideIn 1.5s ease-out;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out 1s forwards;
+}
+
+/* Animation for the Hero Section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button hover effect */
+.hero-section a {
+  color: white;
+  background-color: #004cf0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-section a:hover {
+  background-color: hsl(201, 100%, 41%);
+  transform: scale(1.1);
+}
+
+/* Gallery Section */
+.gallery-section {
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-container {
+  position: relative;
+  overflow: hidden; /* Hide overflow for smoother transitions */
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto; /* Keep aspect ratio */
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: opacity 1s ease-in-out; /* Smooth fade transition */
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  width: 60px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and text */
+  vertical-align: middle; /* Align logo with text */
+}
+
+.floating-map {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.map-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+  width: 200px; /* Adjust width and height to scale within the circle */
+  height: 200px;
+  transform: scale(0.83); /* Adjust the scaling to fit within the circle */
+  transform-origin: 0 0;
+  border: none;
+}
+
+/* Default Styles */
+body {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
